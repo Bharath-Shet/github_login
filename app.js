@@ -10,6 +10,9 @@ app.use(bodyParser.json());
 
 app.use(cors())
 
+app.get('/',(req,res)=>{
+    res.send("<h1>Hello</h1>");
+})
 app.post('/users',(req,res) => {
     console.log("<<<<",req.body)
     superagent
